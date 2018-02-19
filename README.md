@@ -4,7 +4,7 @@ This project is to implement a web application which allows users to create a me
 
 
 ## Description
-The metric web api is developed via Spring Boot (v. 2.0.0.RC1), and built by Maven.
+The metric web api is developed via Spring Boot (v. 2.0.0.RC1), and built by Maven. It runs with a bootstrap class that generates 3 metrics initially.
 It exposes the following REST calls:
 
 **GET**:
