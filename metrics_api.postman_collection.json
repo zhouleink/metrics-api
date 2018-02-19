@@ -1,0 +1,1619 @@
+{
+	"info": {
+		"name": "Metrics API Postman Collections",
+		"_postman_id": "32345bc0-a3a3-b2fb-d27a-bf77ea774151",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"description": "This folder contains all GET requests.",
+			"item": [
+				{
+					"name": "Get-All",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8e76abed-c60f-4af0-91ac-0ebb5e12e808",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Test_Prices\",\n\t\"values\": [170.65, 106.53, 1095.50, 177.36, 1448.69, 200.0]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics"
+							]
+						},
+						"description": "Retrieve all metrics"
+					},
+					"response": [
+						{
+							"id": "707ebcd2-93a3-421a-9ca3-212dddea10b6",
+							"name": "Get-All-Values",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Test_Prices\",\n\t\"values\": [170.65, 106.53, 1095.50, 177.36, 1448.69, 200.0]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 00:39:47 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"responseTime": 95,
+							"body": "{\"metrics\":[{\"id\":1,\"name\":\"Stock_Prices\",\"values\":[106.53,172.43,177.36,1095.5,1448.69],\"metric_url\":\"/api/v1/metrics/1\"},{\"id\":2,\"name\":\"Food_Prices\",\"values\":[2.99,3.99,4.99,5.99,6.99,7.99],\"metric_url\":\"/api/v1/metrics/2\"},{\"id\":3,\"name\":\"Vehicle_Prices\",\"values\":[23495.0,26255.0,30750.0,48400.0,52155.0],\"metric_url\":\"/api/v1/metrics/3\"}]}"
+						}
+					]
+				},
+				{
+					"name": "Get-By-Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8e76abed-c60f-4af0-91ac-0ebb5e12e808",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Test_Prices\",\n\t\"values\": [170.65, 106.53, 1095.50, 177.36, 1448.69, 200.0]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics",
+								"{id}"
+							]
+						},
+						"description": "Retrieve a metric by its id"
+					},
+					"response": [
+						{
+							"id": "be34c9b6-c075-4a25-81d9-af5851837166",
+							"name": "Get-By-Id-Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Test_Prices\",\n\t\"values\": [170.65, 106.53, 1095.50, 177.36, 1448.69, 200.0]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 00:32:37 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"responseTime": 164,
+							"body": "{\"id\":1,\"name\":\"Stock_Prices\",\"values\":[106.53,172.43,177.36,1095.5,1448.69],\"metric_url\":\"/api/v1/metrics/1\"}"
+						},
+						{
+							"id": "2572e225-a7bb-4f52-9a53-2b0aa26ada28",
+							"name": "Get-By-Id-NotFound",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Test_Prices\",\n\t\"values\": [170.65, 106.53, 1095.50, 177.36, 1448.69, 200.0]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics/999",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics",
+										"999"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "19",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 00:34:28 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								}
+							],
+							"cookie": [],
+							"responseTime": 29,
+							"body": "Resource Not Found!"
+						},
+						{
+							"id": "99a412ed-6791-4c41-89d8-c4033cac5c43",
+							"name": "Get-By-Id-BadRequest-InvalidID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Test_Prices\",\n\t\"values\": [170.65, 106.53, 1095.50, 177.36, 1448.69, 200.0]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics/abc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics",
+										"abc"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "11",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 00:36:16 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								}
+							],
+							"cookie": [],
+							"responseTime": 28,
+							"body": "Invalid ID!"
+						}
+					]
+				},
+				{
+					"name": "Get-By-Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8e76abed-c60f-4af0-91ac-0ebb5e12e808",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Test_Prices\",\n\t\"values\": [170.65, 106.53, 1095.50, 177.36, 1448.69, 200.0]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics?name={name}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{name}",
+									"equals": true
+								}
+							]
+						},
+						"description": "Retrieve a metric by its name"
+					},
+					"response": [
+						{
+							"id": "3f1a4a22-38fa-4911-9440-accc20850bbf",
+							"name": "Get-By-Name-Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Test_Prices\",\n\t\"values\": [170.65, 106.53, 1095.50, 177.36, 1448.69, 200.0]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics?name=Stock_Prices",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Stock_Prices",
+											"equals": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 08:13:21 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"responseTime": 33,
+							"body": "{\"id\":1,\"name\":\"Stock_Prices\",\"values\":[106.53,172.43,177.36,1095.5,1448.69],\"metric_url\":\"/api/v1/metrics/1\"}"
+						},
+						{
+							"id": "f9670199-3ff5-4d3c-be1b-403cba0fc3a7",
+							"name": "Get-By-Name-NotFound",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Test_Prices\",\n\t\"values\": [170.65, 106.53, 1095.50, 177.36, 1448.69, 200.0]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics?name=Test_Metric",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Test_Metric",
+											"equals": true
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "19",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 08:14:05 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								}
+							],
+							"cookie": [],
+							"responseTime": 25,
+							"body": "Resource Not Found!"
+						}
+					]
+				},
+				{
+					"name": "Get-By-Id-GetMean",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics/{id}/getMean",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics",
+								"{id}",
+								"getMean"
+							]
+						},
+						"description": "Retrieve arithmetic average of a metric by its id"
+					},
+					"response": [
+						{
+							"id": "74cbbd63-d6d0-4e17-b475-01fd303a4966",
+							"name": "Get-By-Id-GetMean-1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics/1/getMean",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics",
+										"1",
+										"getMean"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 08:15:05 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"responseTime": 18,
+							"body": "{\"response\":600.1020000000001}"
+						}
+					]
+				},
+				{
+					"name": "Get-By-Name-GetMean",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8e76abed-c60f-4af0-91ac-0ebb5e12e808",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Test_Prices\",\n\t\"values\": [170.65, 106.53, 1095.50, 177.36, 1448.69, 200.0]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics?name={name}&method=getMean",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{name}",
+									"equals": true
+								},
+								{
+									"key": "method",
+									"value": "getMean",
+									"equals": true
+								}
+							]
+						},
+						"description": "Retrieve arithmetic average of a metric by its name"
+					},
+					"response": [
+						{
+							"id": "29803207-7035-4b5b-a235-a2c61f44df92",
+							"name": "Get-By-Name-GetMean-1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Test_Prices\",\n\t\"values\": [170.65, 106.53, 1095.50, 177.36, 1448.69, 200.0]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics?name=Stock_Prices&method=getMean",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Stock_Prices",
+											"equals": true
+										},
+										{
+											"key": "method",
+											"value": "getMean",
+											"equals": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 08:16:08 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"responseTime": 24,
+							"body": "{\"response\":600.1020000000001}"
+						}
+					]
+				},
+				{
+					"name": "Get-By-Id-GetMedian",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics/{id}/getMedian",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics",
+								"{id}",
+								"getMedian"
+							]
+						},
+						"description": "Retrieve median of a metric by its id"
+					},
+					"response": [
+						{
+							"id": "f6910d97-0004-47cd-a36d-fb9a60ecb3ff",
+							"name": "Get-By-Id-GetMedian-1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics/1/getMedian",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics",
+										"1",
+										"getMedian"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 08:17:50 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"responseTime": 8,
+							"body": "{\"response\":177.36}"
+						}
+					]
+				},
+				{
+					"name": "Get-By-Name-GetMedian",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics?name={name}&method=getMedian",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{name}",
+									"equals": true
+								},
+								{
+									"key": "method",
+									"value": "getMedian",
+									"equals": true
+								}
+							]
+						},
+						"description": "Retrieve median of a metric by its name"
+					},
+					"response": [
+						{
+							"id": "7f0222c8-2381-4c8f-8954-8eba7b8cf844",
+							"name": "Get-By-Name-GetMedian-1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics?name=Stock_Prices&method=getMedian",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Stock_Prices",
+											"equals": true
+										},
+										{
+											"key": "method",
+											"value": "getMedian",
+											"equals": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 08:23:43 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"responseTime": 32,
+							"body": "{\"response\":177.36}"
+						}
+					]
+				},
+				{
+					"name": "Get-By-Id-GetMin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics/{id}/getMin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics",
+								"{id}",
+								"getMin"
+							]
+						},
+						"description": "Retrieve min of a metric by its id"
+					},
+					"response": [
+						{
+							"id": "3a22fdb3-387a-4289-9013-dfb68dc9c629",
+							"name": "Get-By-Id-GetMin-1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics/1/getMin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics",
+										"1",
+										"getMin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 08:25:04 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"responseTime": 29,
+							"body": "{\"response\":106.53}"
+						}
+					]
+				},
+				{
+					"name": "Get-By-Name-GetMin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics?name={name}&method=getMin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{name}",
+									"equals": true
+								},
+								{
+									"key": "method",
+									"value": "getMin",
+									"equals": true
+								}
+							]
+						},
+						"description": "Retrieve min of a metric by its name"
+					},
+					"response": [
+						{
+							"id": "350d8b9a-9dcc-4499-aa45-15ad7f6a23f0",
+							"name": "Get-By-Name-GetMin-1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics?name=Stock_Prices&method=getMin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Stock_Prices",
+											"equals": true
+										},
+										{
+											"key": "method",
+											"value": "getMin",
+											"equals": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 08:26:07 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"responseTime": 27,
+							"body": "{\"response\":106.53}"
+						}
+					]
+				},
+				{
+					"name": "Get-By-Id-GetMax",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics/{id}/getMax",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics",
+								"{id}",
+								"getMax"
+							]
+						},
+						"description": "Retrieve max of a metric by its id"
+					},
+					"response": [
+						{
+							"id": "a09d476d-f938-40fe-a269-47e9dae40c31",
+							"name": "Get-By-Id-GetMax-1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics/1/getMax",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics",
+										"1",
+										"getMax"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 08:26:42 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"responseTime": 23,
+							"body": "{\"response\":1448.69}"
+						}
+					]
+				},
+				{
+					"name": "Get-By-Name-GetMax",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Gas_Prices\",\n\t\"values\": [2.51, 2.47, 2.83, 3.05, 2.99]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics?name={name}&method=getMax",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{name}",
+									"equals": true
+								},
+								{
+									"key": "method",
+									"value": "getMax",
+									"equals": true
+								}
+							]
+						},
+						"description": "Retrieve max of a metric by its name"
+					},
+					"response": [
+						{
+							"id": "35877ecf-f6bc-4a0d-949f-8be00c455d73",
+							"name": "Get-By-Name-GetMax-1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Gas_Prices\",\n\t\"values\": [2.51, 2.47, 2.83, 3.05, 2.99]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics?name=Stock_Prices&method=getMax",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Stock_Prices",
+											"equals": true
+										},
+										{
+											"key": "method",
+											"value": "getMax",
+											"equals": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 08:32:57 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"responseTime": 23,
+							"body": "{\"response\":1448.69}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c4fd3309-c431-4c86-b52a-f2aa6d5448e3",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "8c264018-64fc-45ed-8860-7eb0ead9ea01",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"description": "",
+			"item": [
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Gas_Prices\",\n\t\"values\": [2.51, 2.47, 2.83, 3.05, 2.99]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics"
+							]
+						},
+						"description": "Create a metric and post values"
+					},
+					"response": [
+						{
+							"id": "a1fde0d1-cdd9-4056-94e6-6ab36a27ebd9",
+							"name": "Post-Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Gas_Prices\",\n\t\"values\": [2.51, 2.47, 2.83, 3.05, 2.99]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 08:31:56 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"responseTime": 33,
+							"body": "{\"id\":5,\"name\":\"Gas_Prices\",\"values\":[2.47,2.51,2.83,2.99,3.05],\"metric_url\":\"/api/v1/metrics/5\"}"
+						},
+						{
+							"id": "ead58560-10d6-46e4-bd4b-7b2b06304d05",
+							"name": "Post-Conflict",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Gas_Prices\",\n\t\"values\": [2.49, 2.18, 2.55, 3.05, 2.99]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/metrics",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"metrics"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Feb 2018 08:34:16 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Message",
+									"value": "Resource with this name has already existed!",
+									"name": "Message",
+									"description": "Custom header"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"responseTime": 34,
+							"body": "[{\"id\":5,\"name\":\"Gas_Prices\",\"values\":[2.47,2.51,2.83,2.99,3.05],\"metric_url\":\"/api/v1/metrics/5\"}]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"description": "",
+			"item": [
+				{
+					"name": "Put-By-Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Test_Metric\",\n\t\"values\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics",
+								"{id}"
+							]
+						},
+						"description": "Update or save a metric by its id"
+					},
+					"response": []
+				},
+				{
+					"name": "Put-By-Name",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Test_Metric\",\n\t\"values\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics?name={name}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{name}",
+									"equals": true
+								}
+							]
+						},
+						"description": "Update or save a metric by its name"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PATCH",
+			"description": "",
+			"item": [
+				{
+					"name": "Patch-By-Id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"values\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics/{id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics",
+								"{id}"
+							]
+						},
+						"description": "Partially update a metric by its id"
+					},
+					"response": []
+				},
+				{
+					"name": "Patch-By-Name",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"values\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/metrics?name={name}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"metrics"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{name}",
+									"equals": true
+								}
+							]
+						},
+						"description": "Partially update a metric by its name"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1bd360e6-f0a0-43d3-b82a-7a5612319d1d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "fe43e99c-014b-455e-81fd-0ec0d5c20dae",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

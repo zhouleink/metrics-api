@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="web-api-for-metrics">Web API for Metrics</h1>
+<p>This project is to implement a web application which allows users to create a metric and post values to that metric. (e.g. stock price of a security). Users should be able to also request summary statistics for that metric.</p>
+<h2 id="description">Description</h2>
+<p>The metric web api is developed via Spring Boot (v. 2.0.0.RC1), and built by Maven.<br>
+It exposes the following REST calls:</p>
+<p><strong>GET</strong>:</p>
+<ul>
+<li><em><strong>~{root}/api/v1/metrics</strong></em><br>
+&nbsp;&nbsp; returns all metrics &nbsp;&nbsp;</li>
+<li><em><strong>~{root}/api/v1/metrics/{id}</strong></em><br>
+&nbsp;&nbsp; returns a specific metric by its id</li>
+<li><em><strong>~{root}/api/v1/metrics?name={name}</strong></em><br>
+&nbsp;&nbsp;returns a specific metric by its name</li>
+<li><em><strong>~{root}/api/v1/metrics/{id}/getMean</strong></em><br>
+&nbsp;&nbsp; returns the arithmetic average of a specific metric by its id</li>
+<li><em><strong>~{root}/api/v1/metrics?name={name}&amp;method=getMean</strong></em><br>
+&nbsp;&nbsp;  returns the arithmetic average of a specific metric by its name</li>
+<li><em><strong>~{root}/api/v1/metrics/{id}/getMedian</strong></em><br>
+&nbsp;&nbsp;  returns the median value of a specific metric by its id</li>
+<li><em><strong>~{root}/api/v1/metrics?name={name}&amp;method=getMedian</strong></em><br>
+&nbsp;&nbsp;  returns the median value of a specific metric by its name</li>
+<li><em><strong>~{root}/api/v1/metrics/{id}/getMin</strong></em><br>
+&nbsp;&nbsp;   returns the min value of a specific metric by its id</li>
+<li><em><strong>~{root}/api/v1/metrics?name={name}&amp;method=getMin</strong></em><br>
+&nbsp;&nbsp;   returns the min value of a specific metric by its name</li>
+<li><em><strong>~{root}/api/v1/metrics/{id}/getMax</strong></em><br>
+&nbsp;&nbsp;    returns the max value of a specific metric by its id</li>
+<li><em><strong>~{root}/api/v1/metrics?name={name}&amp;method=getMax</strong></em><br>
+&nbsp;&nbsp;   returns the max value of a specific metric by its name</li>
+</ul>
+<p><strong>POST</strong>:</p>
+<ul>
+<li><em><strong>~{root}/api/v1/metrics</strong></em><br>
+&nbsp;&nbsp; creates a new metric and posts values to this metric</li>
+</ul>
+<p><strong>PUT</strong>:</p>
+<ul>
+<li><em><strong>~{root}/api/v1/metrics/{id}</strong></em><br>
+&nbsp;&nbsp; updates or saves a metric by its id</li>
+<li><em><strong>~{root}/api/v1/metrics?name={name}</strong></em><br>
+&nbsp;&nbsp; udpates or saves a metric by its name</li>
+</ul>
+<p><strong>PATCH</strong>:</p>
+<ul>
+<li><em><strong>~{root}/api/v1/metrics/{id}</strong></em><br>
+&nbsp;&nbsp; partially updates a metric by its id</li>
+<li><em><strong>~{root}/api/v1/metrics?name={name}</strong></em><br>
+&nbsp;&nbsp; partially updates a metric by its name</li>
+</ul>
+<h2 id="efficiency">Efficiency</h2>
+<p><em>POST/PUT/PATCH</em> calls invoke <em><strong>Collections.sort()</strong></em> method to sort the values in each metric, so the time complexity is <em><strong>O(n * lg(n))</strong></em> and space complexity is <em><strong>O(n)</strong></em><br>
+Since the values are sorted, all GET calls except those <em>getMean</em> calls are <em><strong>O(1)</strong></em> and <em>getMean</em> calls are <em><strong>O(n)</strong></em></p>
+<h2 id="build-and-deploy">Build and deploy</h2>
+<p><em>(Under the root directory of the project)</em><br><br>
+<strong>Build</strong>:  <em>mvn clean package</em><br><br>
+<strong>Deploy</strong>: <em>java -jar target/metrics-api-1.0.0-SNAPSHOT.jar</em></p>
+</div>
+</body>
+
+</html>
